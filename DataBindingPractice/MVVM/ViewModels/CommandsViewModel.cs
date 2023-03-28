@@ -10,8 +10,12 @@ namespace DataBindingPractice.MVVM.ViewModels
     public class CommandsViewModel
     {
         public ICommand ClickCommand =>
-            new Command(() => 
-            App.Current.MainPage
-            .DisplayAlert("Title", "Message", "Ok"));
+            new Command(Alert);
+
+
+        private void Alert()
+        {
+            App.Current.MainPage.DisplayAlert("Title", "Message", "Ok");
+        }
     }
 }
