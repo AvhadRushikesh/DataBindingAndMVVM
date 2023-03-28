@@ -4,19 +4,9 @@
              x:Class="DataBindingPractice.MVVM.Views.PeopleView"
              Title="PeopleView">
 
-    <CollectionView SelectionMode="Multiple">
-        <CollectionView.ItemsSource>
-            <x:Array Type="{x:Type x:String}">
-                <x:String>Mono</x:String>
-                <x:String>Monodroid</x:String>
-                <x:String>Monotouch</x:String>
-                <x:String>Monorail</x:String>
-                <x:String>Monodevelop</x:String>
-                <x:String>Monotone</x:String>
-                <x:String>Monopoly</x:String>
-                <x:String>Monodal</x:String>
-            </x:Array>
-        </CollectionView.ItemsSource>
+    <CollectionView SelectionMode="Multiple"
+                    ItemsSource="{Binding People}">
+       
         <CollectionView.ItemTemplate>
             <DataTemplate>
                 <StackLayout>
