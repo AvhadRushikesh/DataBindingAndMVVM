@@ -11,7 +11,7 @@ public partial class MainPage : ContentPage
 	{
 		InitializeComponent();
 
-        var person = new Person
+        person = new Person
         {
             Name = "John",
             Phone = "9999",

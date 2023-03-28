@@ -11,10 +11,9 @@ namespace DataBindingPractice.Models
     public class Person : INotifyPropertyChanged
     {
         private string _name;
-
         public string Name
         {
-            get => _name; 
+            get => _name;
             set
             {
                 _name = value;
@@ -22,9 +21,28 @@ namespace DataBindingPractice.Models
             }
         }
 
-        public string Phone { get; set; }
+        private string _phone;
 
-        public string Address { get; set; }
+        public string Phone
+        {
+            get => _phone;
+            set
+            {
+                _phone = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private string _address;
+        public string Address 
+        {
+            get => _address;
+            set
+            {
+                _address = value;
+                OnPropertyChanged();
+            }            
+        }
 
 
         public event PropertyChangedEventHandler PropertyChanged;

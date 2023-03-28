@@ -1,6 +1,4 @@
-﻿using DataBindingPractice.Pages;
-
-namespace DataBindingPractice;
+﻿namespace DataBindingPractice;
 
 public partial class App : Application
 {
