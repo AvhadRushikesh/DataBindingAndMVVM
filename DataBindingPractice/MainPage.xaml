@@ -21,7 +21,7 @@
             <Label x:Name="txtName"
                    FontSize="50"
                    HorizontalOptions="Center"
-                   Text="Hector"
+                   Text="{Binding Name, Source={StaticResource person}}"
                    VerticalOptions="Center" />
 
             <Button
