@@ -8,5 +8,6 @@ namespace DataBindingPractice.MVVM.ViewModels
 {
     public class PeopleViewModel
     {
+        public List<string> People { get; set; }
     }
 }
