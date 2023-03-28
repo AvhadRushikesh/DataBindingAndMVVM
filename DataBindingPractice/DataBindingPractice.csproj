@@ -53,9 +53,14 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="MVVM\Views\ConverterView.xaml">
+	  <MauiXaml Update="MVVM\Views\CommandsView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="MVVM\Models\" />
+	  <Folder Include="MVVM\ViewModels\" />
 	</ItemGroup>
 
 </Project>
