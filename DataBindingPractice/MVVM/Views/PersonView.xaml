@@ -7,31 +7,19 @@
     <StackLayout
         VerticalOptions="Center"
         HorizontalOptions="Center">
+        
         <Label 
             Text="{Binding person.Name}"
             FontSize="50"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+        
         <Label 
             Text="{Binding person.Age}"
             FontSize="50"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-        <Label 
-            Text="{Binding teacher.Phone}"
-            FontSize="50"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-        <Label 
-            Text="{Binding person.Address}"
-            FontSize="50"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-        <Label 
-            Text="{Binding person.Technology}"
-            FontSize="50"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        
     </StackLayout>
     
 </ContentPage>

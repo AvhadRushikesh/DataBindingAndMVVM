@@ -5,7 +5,6 @@ namespace DataBindingPractice.MVVM.ViewModels
     public class PersonViewModel
     {
         public Person person { get; set; }
-        public Teacher teacher { get; set; }
 
 
         public PersonViewModel()
@@ -17,14 +16,6 @@ namespace DataBindingPractice.MVVM.ViewModels
                 Phone = 9999,
                 Address = "New Address",
                 Technology = "MAUI"
-            };
-
-            teacher = new Teacher
-            {
-                ID = 1,
-                Name = "Sanjay",
-                Subject = "English",
-                Phone = 783788
             };
         }
     }
