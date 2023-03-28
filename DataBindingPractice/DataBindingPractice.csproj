@@ -56,9 +56,10 @@
 	  <MauiXaml Update="MVVM\Views\PeopleView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="MVVM\Views\PersonView.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="MVVM\Models\" />
 	</ItemGroup>
 
 </Project>
