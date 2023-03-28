@@ -4,6 +4,13 @@
              xmlns:Models="clr-namespace:DataBindingPractice.Models"
              x:Class="DataBindingPractice.MainPage">
 
+    <ContentPage.Resources>
+        <Models:Person x:Key="person"
+                       Name="Peter"
+                       Address="Some Address"
+                       Phone="XXXX" />
+    </ContentPage.Resources>
+    
     <ScrollView>
         <VerticalStackLayout
             Spacing="25"
