@@ -16,7 +16,7 @@
                 Text="{Binding Number1}"/>
             
             <Entry 
-                Placeholder="Number 1" 
+                Placeholder="Number 2" 
                 Text="{Binding Number2}"/>
             
             <Entry 
