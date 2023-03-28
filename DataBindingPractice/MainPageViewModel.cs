@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PropertyChanged;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -9,12 +10,14 @@ using System.Windows.Input;
 
 namespace DataBindingPractice
 {
+    [AddINotifyPropertyChangedInterface]
     public class MainPageViewModel
     {
         public int Number1 { get; set; }
         public int Number2 { get; set; }
         public int Result { get; set; }
 
-        
+        public ICommand AddCommand =>
+            new Command(() => Result = Number1 + Number2);
     }
 }
