@@ -14,9 +14,9 @@ namespace DataBindingPractice.MVVM.Converters
             var answer = value.ToString();
             if (answer == "YES")
             {
-                return true;
+                return 3;
             }
-            return false;
+            return 2;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
