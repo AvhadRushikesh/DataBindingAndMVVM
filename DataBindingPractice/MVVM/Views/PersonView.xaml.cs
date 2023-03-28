@@ -7,6 +7,11 @@ public partial class PersonView : ContentPage
 	public PersonView()
 	{
 		InitializeComponent();
-		var person = new Person();
+		var person = new Person
+		{
+			Name = "Hector",
+			Age = 100
+		};
+		BindingContext = person;
 	}
 }
