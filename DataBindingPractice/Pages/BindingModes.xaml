@@ -18,7 +18,7 @@
             Placeholder="Target"
             FontSize="50"
             Text="{Binding Source={x:Reference source}, 
-            Path=Text, Mode=OneWayToSource}" />
+            Path=Text, Mode=TwoWay}" />
     
     </StackLayout>
 </ContentPage>
