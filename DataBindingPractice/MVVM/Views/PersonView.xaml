@@ -13,13 +13,24 @@
             FontSize="50"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-        
-        <Label 
-            Text="{Binding person.Age}"
-            FontSize="50"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-        
+
+        <Slider 
+            Minimum="0" 
+            Maximum="100"
+            Value="{Binding person.Age}" />
+
+        <Switch 
+            IsToggled="{Binding person.Married}" />
+
+        <DatePicker 
+            Date="{Binding person.BirthDate}" />
+
+        <Entry 
+            Text="{Binding person.Weight}" />
+
+        <TimePicker
+            Time="{Binding person.Lunchtime}" />
+
     </StackLayout>
     
 </ContentPage>

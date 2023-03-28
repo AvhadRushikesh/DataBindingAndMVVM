@@ -12,10 +12,11 @@ namespace DataBindingPractice.MVVM.ViewModels
             person = new Person
             {
                 Name = "Hector",
-                Age = 100,
-                Phone = 9999,
-                Address = "New Address",
-                Technology = "MAUI"
+                Age = 50,
+                Married = true,
+                BirthDate = new DateTime(2000, 08, 05),
+                Weight = 100,
+                Lunchtime = new TimeSpan(10, 0, 0)
             };
         }
     }
