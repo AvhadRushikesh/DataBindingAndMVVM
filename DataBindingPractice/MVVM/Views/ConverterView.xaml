@@ -4,6 +4,10 @@
              xmlns:converter="clr-namespace:DataBindingPractice.MVVM.Converters"
              x:Class="DataBindingPractice.MVVM.Views.ConverterView"
              Title="ConverterView">
+
+    <ContentPage.Resources>
+        <converter:BoolConverter x:Key="boolConverter" />
+    </ContentPage.Resources>
     
     <HorizontalStackLayout 
         VerticalOptions="Center"
