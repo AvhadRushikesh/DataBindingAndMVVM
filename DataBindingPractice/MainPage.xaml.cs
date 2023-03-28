@@ -1,4 +1,6 @@
-﻿namespace DataBindingPractice;
+﻿using DataBindingPractice.Models;
+
+namespace DataBindingPractice;
 
 public partial class MainPage : ContentPage
 {
@@ -11,14 +13,11 @@ public partial class MainPage : ContentPage
 
 	private void OnCounterClicked(object sender, EventArgs e)
 	{
-		count++;
-
-		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
-		else
-			CounterBtn.Text = $"Clicked {count} times";
-
-		SemanticScreenReader.Announce(CounterBtn.Text);
+		var person = new Person
+		{
+			Name = "John",
+			Phone = "9999",
+			Address = "X Address"
+		};
 	}
 }
-
