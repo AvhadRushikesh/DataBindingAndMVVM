@@ -9,5 +9,18 @@ namespace DataBindingPractice.MVVM.ViewModels
     public class PeopleViewModel
     {
         public List<string> People { get; set; }
+
+        public PeopleViewModel()
+        {
+            People = new List<string>
+            {
+                "Tony",
+                "Steve",
+                "Thor",
+                "Natasha",
+                "Clint",
+                "Bruce"
+            };
+        }
     }
 }
