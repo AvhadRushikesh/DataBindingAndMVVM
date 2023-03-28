@@ -20,8 +20,7 @@ public partial class MainPage : ContentPage
 			Address = "X Address"
 		};
 
-		txtName.BindingContext = person;
-		txtName.SetBinding(Label.TextProperty, "Name");
+		BindingContext = person;
 
 
 	}
