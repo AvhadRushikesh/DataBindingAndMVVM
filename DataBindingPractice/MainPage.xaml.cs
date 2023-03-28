@@ -20,12 +20,12 @@ public partial class MainPage : ContentPage
 			Address = "X Address"
 		};
 
-		//Binding personBinding = new Binding();
+		Binding personBinding = new Binding();
 
-		//personBinding.Source = person;
-		//personBinding.Path = "Name";
+		personBinding.Source = person;
+		personBinding.Path = "Name";
 
-        // Press f12 on Entry class go to defination and see all BindableProperty
-        Entry txtAddress
-    }
+		txtName.SetBinding(Label.TextProperty, personBinding);
+
+	}
 }
