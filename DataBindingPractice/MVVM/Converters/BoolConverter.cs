@@ -14,14 +14,19 @@ namespace DataBindingPractice.MVVM.Converters
             var answer = value.ToString();
             if (answer == "YES")
             {
-                return 3;
+                return true;
             }
-            return 2;
+            return false;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return null;
+            var boolean = (bool)value;
+            if (boolean)
+            {
+                return "YES";
+            }
+            return "NO";
         }
     }
 }

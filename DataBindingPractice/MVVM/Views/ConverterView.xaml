@@ -12,8 +12,8 @@
     <HorizontalStackLayout 
         VerticalOptions="Center"
         HorizontalOptions="Center">
-        <Entry 
-            Placeholder="{Binding data.Married, Converter={StaticResource boolConverter}}"/>
+        <CheckBox 
+            IsChecked="{Binding data.Married, Converter={StaticResource boolConverter}}"/>
         <Label 
             Text="Married?" />
     </HorizontalStackLayout>
