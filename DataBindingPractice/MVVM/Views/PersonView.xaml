@@ -8,7 +8,7 @@
         VerticalOptions="Center"
         HorizontalOptions="Center">
         <Label 
-            Text="{Binding Name}"
+            Text="{Binding person.Name}"
             FontSize="50"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
