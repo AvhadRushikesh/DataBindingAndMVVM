@@ -6,7 +6,7 @@
     <HorizontalStackLayout 
         VerticalOptions="Center"
         HorizontalOptions="Center">
-        <CheckBox />
+        <CheckBox IsChecked="{Binding data.Married}"/>
         <Label Text="Married?" />
     </HorizontalStackLayout>
 </ContentPage>
