@@ -11,6 +11,10 @@ namespace DataBindingPractice.MVVM.ViewModels
     {
         public ICommand ClickCommand { get; }
 
+        public ICommand SearchCommand { get; }
+
+        public string SearchTerm { get; set; }
+
 
         public CommandsViewModel()
         {
@@ -18,6 +22,11 @@ namespace DataBindingPractice.MVVM.ViewModels
             {
                 App.Current.MainPage
                 .DisplayAlert("Title", "Message", "Ok");
+            });
+
+            SearchCommand = new Command(() =>
+            {
+                var data = SearchTerm;
             });
         }
     }
