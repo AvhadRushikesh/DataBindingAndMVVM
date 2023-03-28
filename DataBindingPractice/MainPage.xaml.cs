@@ -13,14 +13,16 @@ public partial class MainPage : ContentPage
 
 	private void OnCounterClicked(object sender, EventArgs e)
 	{
-		//var person = new Person
-		//{
-		//	Name = "John",
-		//	Phone = "9999",
-		//	Address = "X Address"
-		//};
+		var person = new Person
+		{
+			Name = "John",
+			Phone = "9999",
+			Address = "X Address"
+		};
 
-		
+		txtName.BindingContext = person;
+		txtName.SetBinding(Label.TextProperty, "Name");
+
 
 	}
 }

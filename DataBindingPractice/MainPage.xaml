@@ -1,15 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:Models="clr-namespace:DataBindingPractice.Models"
              x:Class="DataBindingPractice.MainPage">
 
-    <ContentPage.Resources>
-        <Models:Person x:Key="person"
-                       Name="Peter"
-                       Address="Some Address"
-                       Phone="XXXX" />
-    </ContentPage.Resources>
+    
     
     <ScrollView>
         <VerticalStackLayout
@@ -21,7 +15,6 @@
             <Label x:Name="txtName"
                    FontSize="50"
                    HorizontalOptions="Center"
-                   Text="{Binding Name, Source={StaticResource person}}"
                    VerticalOptions="Center" />
 
             <Button
