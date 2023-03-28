@@ -24,9 +24,9 @@ namespace DataBindingPractice.MVVM.ViewModels
                 .DisplayAlert("Title", "Message", "Ok");
             });
 
-            SearchCommand = new Command(() =>
+            SearchCommand = new Command((s) =>
             {
-                var data = SearchTerm;
+                var data = s;
             });
         }
     }
