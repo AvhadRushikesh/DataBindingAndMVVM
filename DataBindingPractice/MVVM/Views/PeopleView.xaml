@@ -19,7 +19,7 @@
                         HorizontalOptions="Center"
                         VerticalOptions="CenterAndExpand">
                         <Label
-                            Text="{Binding .}" />
+                            Text="{Binding Name}" />
                     </Frame>
                 </StackLayout>
             </DataTemplate>
