@@ -10,5 +10,8 @@ namespace DataBindingPractice.MVVM.Models
     {
         public string Name { get; set; }
         public int Age { get; set; }
+        public int Phone { get; set; }
+        public string Address { get; set; }
+        public string Technology { get; set; }
     }
 }

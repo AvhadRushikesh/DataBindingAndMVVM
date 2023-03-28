@@ -12,6 +12,26 @@
             FontSize="50"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+        <Label 
+            Text="{Binding person.Age}"
+            FontSize="50"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Label 
+            Text="{Binding person.Phone}"
+            FontSize="50"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Label 
+            Text="{Binding person.Address}"
+            FontSize="50"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Label 
+            Text="{Binding person.Technology}"
+            FontSize="50"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
     </StackLayout>
     
 </ContentPage>
