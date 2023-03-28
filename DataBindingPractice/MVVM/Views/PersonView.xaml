@@ -3,9 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DataBindingPractice.MVVM.Views.PersonView"
              Title="PersonView">
-    <StackLayout>
+    <StackLayout
+        VerticalOptions="Center"
+        HorizontalOptions="Center">
         <Label 
             Text="{Binding Name}"
+            FontSize="50"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
     </StackLayout>
