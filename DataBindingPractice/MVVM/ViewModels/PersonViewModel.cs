@@ -1,17 +1,14 @@
 ﻿using DataBindingPractice.MVVM.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataBindingPractice.MVVM.ViewModels
 {
     public class PersonViewModel
     {
+        public Person person { get; set; }
+
         public PersonViewModel()
         {
-            var person = new Person
+            person = new Person
             {
                 Name = "Hector",
                 Age = 100
