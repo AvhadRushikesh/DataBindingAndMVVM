@@ -7,9 +7,16 @@
     <VerticalStackLayout 
         HorizontalOptions="Center"
         VerticalOptions="Center">
+        
         <Label 
             Text="Welcome to .NET MAUI!"
-            Rotation="45"
+            Rotation="{Binding Source={x:Reference slider},Path=Value}"
             FontSize="50"/>
+
+        <Slider
+            x:Name="slider"
+            Minimum="0"
+            Maximum="360" />
+        
     </VerticalStackLayout>
 </ContentPage>
