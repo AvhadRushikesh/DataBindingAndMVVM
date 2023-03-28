@@ -11,7 +11,12 @@ namespace DataBindingPractice.MVVM.Converters
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            throw new NotImplementedException();
+            var answer = value.ToString();
+            if (answer == "YES")
+            {
+                return true;
+            }
+            return false;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
