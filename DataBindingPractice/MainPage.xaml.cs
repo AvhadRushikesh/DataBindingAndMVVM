@@ -4,7 +4,7 @@ namespace DataBindingPractice;
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
+	
 
 	public MainPage()
 	{
@@ -20,12 +20,7 @@ public partial class MainPage : ContentPage
 			Address = "X Address"
 		};
 
-		Binding personBinding = new Binding();
-
-		personBinding.Source = person;
-		personBinding.Path = "Name";
-
-		txtName.SetBinding(Label.TextProperty, personBinding);
+		
 
 	}
 }
