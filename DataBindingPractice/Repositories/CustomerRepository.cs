@@ -27,5 +27,19 @@ namespace DataBindingPractice.Repositories
                 StatusMsg = $"Error: {ex.Message}";
             }
         }
+
+        //  Select * From Table
+        public List<Customer> GetAll()
+        {
+            try
+            {
+                return conn.Table<Customer>().ToList();
+            }
+            catch (Exception ex)
+            {
+                StatusMsg = $"Error: {ex.Message}";
+            }
+            return null;
+        }
     }
 }
