@@ -1,4 +1,5 @@
-﻿using SQLite;
+﻿using DataBindingPractice.MVVM.Models;
+using SQLite;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,7 @@ namespace DataBindingPractice.Repositories
         public CustomerRepository()
         {
             conn = new SQLiteConnection(Constants.DatabasePath, Constants.Flags);
+            conn.CreateTable<Customer>();
         }
     }
 }
