@@ -1,4 +1,5 @@
-﻿using DataBindingPractice.Repositories;
+﻿using DataBindingPractice.MVVM.Views;
+using DataBindingPractice.Repositories;
 
 namespace DataBindingPractice;
 
@@ -12,6 +13,6 @@ public partial class App : Application
 
 		_customerRepo = repo;
 
-		MainPage = new MainPage();
+		MainPage = new SQLTest();
 	}
 }

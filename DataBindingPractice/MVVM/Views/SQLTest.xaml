@@ -15,6 +15,6 @@
             <Button 
                 Text="Add Or Update" />
         </VerticalStackLayout>
+        <CollectionView Grid.Row="1" />
     </Grid>
-    
 </ContentPage>
