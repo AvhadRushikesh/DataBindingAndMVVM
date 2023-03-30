@@ -10,5 +10,7 @@ namespace DataBindingPractice.MVVM.ViewModels
     public class SQLiteTestViewModel
     {
         public List<Customer> customers { get; set; }
+
+        public Customer CurrentCustomer { get; set; }
     }
 }

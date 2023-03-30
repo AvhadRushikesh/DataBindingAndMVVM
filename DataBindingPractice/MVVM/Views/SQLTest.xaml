@@ -13,7 +13,8 @@
                 Placeholder="Address"
                 Text="Address" />
             <Button 
-                Text="Add Or Update" />
+                Text="Add Or Update" 
+                Command="{Binding AddOrUpdateCommand}"/>
         </VerticalStackLayout>
         <CollectionView 
             Grid.Row="1" 
