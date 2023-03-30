@@ -41,5 +41,19 @@ namespace DataBindingPractice.Repositories
             }
             return null;
         }
+
+        public Customer Get(int id)
+        {
+            try
+            {
+                return conn.Table<Customer>()
+                    .FirstOrDefault(x => x.ID == id);
+            }
+            catch (Exception ex)
+            {
+                StatusMsg = $"Error: {ex.Message}";
+            }
+            return null;
+        }
     }
 }
