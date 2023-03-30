@@ -77,5 +77,18 @@ namespace DataBindingPractice.Repositories
             }
             return null;
         }
+
+        public void Delete(int customerID)
+        {
+            try
+            {
+                var customer = Get(customerID);
+                conn.Delete(customer);
+            }
+            catch (Exception ex)
+            {
+                StatusMsg = $"Error: {ex.Message}";
+            }
+        }
     }
 }
