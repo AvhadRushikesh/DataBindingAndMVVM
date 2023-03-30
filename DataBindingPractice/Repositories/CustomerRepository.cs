@@ -14,13 +14,21 @@ namespace DataBindingPractice.Repositories
             conn.CreateTable<Customer>();
         }
 
-        public void Add(Customer newCustomer)
+        public void AddOrUpdate(Customer customer)
         {
             int result = 0;
             try
             {
-                result = conn.Insert(newCustomer);
-                StatusMsg = $"{result} row(s) added";
+                if (customer.ID != 0)
+                {
+                    result = conn.Update(customer);
+                    StatusMsg = $"{result} row(s) Updated";
+                }
+                else
+                {
+                    result = conn.Insert(customer);
+                    StatusMsg = $"{result} row(s) added";
+                }               
             }
             catch (Exception ex)
             {
