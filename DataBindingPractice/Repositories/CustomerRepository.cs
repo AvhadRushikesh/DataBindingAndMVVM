@@ -55,5 +55,19 @@ namespace DataBindingPractice.Repositories
             }
             return null;
         }
+
+        //  Get Executing Query
+        public List<Customer> GetAllQuery()
+        {
+            try
+            {
+                return conn.Query<Customer>("SELECT * FROM Customers").ToList();
+            }
+            catch (Exception ex)
+            {
+                StatusMsg = $"Error: {ex.Message}";
+            }
+            return null;
+        }
     }
 }
