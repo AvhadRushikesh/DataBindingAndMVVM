@@ -11,22 +11,7 @@
             Padding="30,0"
             VerticalOptions="Center">
 
-            <Entry 
-                Placeholder="Number 1" 
-                Text="{Binding Number1}"/>
             
-            <Entry 
-                Placeholder="Number 2" 
-                Text="{Binding Number2}"/>
-            
-            <Entry 
-                Placeholder="Result" 
-                Text="{Binding Result}"/>
-            
-            <Button
-                Text="Calculate"
-                HorizontalOptions="Center"
-                Command="{Binding AddCommand}" />
 
         </VerticalStackLayout>
     </ScrollView>
