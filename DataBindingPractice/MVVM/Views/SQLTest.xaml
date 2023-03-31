@@ -1,23 +1,88 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DataBindingPractice.MVVM.ViewModels"
              x:Class="DataBindingPractice.MVVM.Views.SQLTest"
              Title="SQLTest">
 
-    <Grid RowDefinitions=".2*,.8*">
-        <VerticalStackLayout>
-            <Entry 
-                Placeholder="Name"
-                Text="John" />
-            <Entry 
+    <Grid RowDefinitions=".3*,.7*">
+        <Grid Grid.Row="0">
+            <VerticalStackLayout>
+                <Entry 
+                x:Name="NameEntry"
+                Placeholder="Name"                
+                Text="{Binding NameEntry}" />
+                <Entry 
+                x:Name="AddressEntry"
                 Placeholder="Address"
-                Text="Address" />
-            <Button 
+                Text="{Binding AddressEntry}" />
+                <Button 
                 Text="Add Or Update" 
-                Command="{Binding AddOrUpdateCommand}"/>
-        </VerticalStackLayout>
-        <CollectionView 
-            Grid.Row="1" 
-            ItemsSource="{Binding customers}" />
+                Command="{Binding Source={RelativeSource AncestorType={x:Type local:SQLiteTestViewModel}}, Path=AddOrUpdateCommand}" />
+            </VerticalStackLayout>
+        </Grid>
+
+        <Grid
+            Grid.Row="1" >
+
+            <CollectionView 
+                Grid.Row="1"
+                ItemsSource="{Binding customers}" >
+                
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid
+                        Margin="15,15,20,15"
+                        Padding="10"
+                        ColumnDefinitions=".2*,.3*,.2*,.2*,.1*">
+                            <Frame
+                                Grid.ColumnSpan="5"
+                                Margin="10,10,10,10"
+                                BorderColor="DarkBlue"
+                                CornerRadius="1000"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"
+                                WidthRequest="10000"
+                                HeightRequest="100" >
+                                <Frame.Background>
+                                    <LinearGradientBrush EndPoint="1,0">
+                                        <GradientStop Offset="0" Color="#F8F9FA" />
+                                        <GradientStop Offset="1" Color="#DEE2E6" />
+                                    </LinearGradientBrush>
+                                </Frame.Background>
+                            </Frame>
+
+                            <Label
+                                Grid.Column="0"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"
+                                IsVisible="True"
+                                TextColor="Black"
+                                Text="{Binding ID}" />
+                            <Label
+                                Grid.Column="1"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"
+                                Text="{Binding Name}"
+                                TextColor="Black" />
+                            <Label
+                                Grid.Column="2"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"
+                                Text="{Binding Address}"
+                                TextColor="Black" />
+
+
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+            
+        </Grid>
+
+
+
+
     </Grid>
 </ContentPage>
